@@ -6,39 +6,39 @@
 #    By: jinhokim <jinhokim@student.42seoul.kr>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/09/28 20:08:11 by jinhokim          #+#    #+#              #
-#    Updated: 2022/09/02 15:05:18 by jinhokim         ###   ########.fr        #
+#    Updated: 2022/09/07 15:17:58 by jinhokim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+SRCS		= ./ft_printf.c \
+			  ./utils.c ./print_char.c ./print_nbr.c ./print_str.c
+
+OBJS		= $(SRCS:.c=.o)
+
+CC			= gcc
+CFLAGS		= -Wall -Wextra -Werror
+RM			= rm -f
 
 NAME		= libftprintf.a
 LIBFT		= libft
 LIBFT_LIB	= libft.a
 
-SRCS		= ./ft_printf.c \
-			  ./utils.c ./print_char.c ./print_nbr.c ./print_str.c
-OBJS		= $(SRCS:.c=.o)
-INCS		= .
-RM			= rm -f
-LIBC		= ar rc
-CC			= gcc
-CFLAGS		= -Wall -Wextra -Werror
-
 .c.o :
-	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I$(INCS)
+	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I .
 
 $(NAME) : $(OBJS)
-	make all -C $(LIBFT)/
-	cp $(LIBFT)/$(LIBFT_LIB) $(NAME)
-	$(LIBC) $(NAME) $(OBJS)
+	make all -C ./libft 
+	cp ./libft/libft.a $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 all : $(NAME)
 
 fclean : clean
 	$(RM) $(NAME)
-	make fclean -C $(LIBFT)
+	make fclean -C ./libft
 
 clean :
 	$(RM) $(OBJS)
-	make clean -C $(LIBFT)
+	make clean -C ./libft
 
 re : fclean all
