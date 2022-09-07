@@ -6,7 +6,7 @@
 /*   By: jinhokim <jinhokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/02 13:57:47 by jinhokim          #+#    #+#             */
-/*   Updated: 2022/09/02 15:45:23 by jinhokim         ###   ########.fr       */
+/*   Updated: 2022/09/07 14:27:59 by jinhokim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <./libft/libft.h>
+# include "./libft/libft.h"
 
 typedef struct s_flags
 {
