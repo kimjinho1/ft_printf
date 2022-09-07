@@ -20,8 +20,6 @@ CFLAGS		= -Wall -Wextra -Werror
 RM			= rm -f
 
 NAME		= libftprintf.a
-LIBFT		= libft
-LIBFT_LIB	= libft.a
 
 .c.o :
 	$(CC) $(CFLAGS) -c $< -o $(<:.c=.o) -I .
