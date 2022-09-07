@@ -6,7 +6,7 @@
 /*   By: jinhokim <jinhokim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/28 18:25:55 by jinhokim          #+#    #+#             */
-/*   Updated: 2022/09/02 14:48:15 by jinhokim         ###   ########.fr       */
+/*   Updated: 2022/09/06 17:52:33 by jinhokim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ int			ft_memcmp(const void *s1, const void *s2, size_t n);
 
 size_t		ft_strlen(const char *s);
 size_t		ft_strlcpy(char *dst, const char *src, size_t size);
+char		*ft_strcpy(char *dst, char *src);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 char		*ft_strchr(const char *s, int c);
 char		*ft_strrchr(const char *s, int c);
